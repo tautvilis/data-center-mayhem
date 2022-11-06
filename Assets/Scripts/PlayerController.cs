@@ -29,19 +29,34 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        if (collision.gameObject.tag == "Server")
+        var gameObject = collision.gameObject;
+        if (gameObject.tag == "Server")
         {
-            Circle.SetActive(true);
+            for(int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                
+                var child = gameObject.transform.GetChild(i).gameObject;
+                Debug.Log(child.tag);
+                if(child.tag == "ServerFixIcon"){
+                    child.SetActive(true);
+                }
+            }
         }
     }
 
-        private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Server")
+        var gameObject = collision.gameObject;
+        if (gameObject.tag == "Server")
         {
-            Circle.SetActive(false);
+            for(int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                var child = gameObject.transform.GetChild(i).gameObject;
+                if(child.tag == "ServerFixIcon"){
+                    child.SetActive(false);
+                }
+            }
         }
     }
 
