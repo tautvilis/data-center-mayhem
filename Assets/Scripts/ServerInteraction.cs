@@ -19,6 +19,7 @@ public class ServerInteraction : MonoBehaviour
              Collider[] objectToDetect = Physics.OverlapSphere(transform.position, 20, myLayer);
              if (objectToDetect.Length > 0)
              {
+                Debug.Log(objectToDetect.Length);
                  if (objectToDetect[0].gameObject.tag == "Server")
                  {
                      Debug.Log("Ezz");

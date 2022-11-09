@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float Speed;
+    [SerializeField] public float Speed;
     private Rigidbody2D body;
     private Animator animator;
     
@@ -26,38 +26,6 @@ public class PlayerController : MonoBehaviour
         transform.position = new Vector3(body.position.x, body.position.y, 1);
 
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        var gameObject = collision.gameObject;
-        if (gameObject.tag == "Server")
-        {
-            for(int i = 0; i < gameObject.transform.childCount; i++)
-            {
-                
-                var child = gameObject.transform.GetChild(i).gameObject;
-                Debug.Log(child.tag);
-                if(child.tag == "ServerFixIcon"){
-                    child.SetActive(true);
-                }
-            }
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-
-        var gameObject = collision.gameObject;
-        if (gameObject.tag == "Server")
-        {
-            for(int i = 0; i < gameObject.transform.childCount; i++)
-            {
-                var child = gameObject.transform.GetChild(i).gameObject;
-                if(child.tag == "ServerFixIcon"){
-                    child.SetActive(false);
-                }
-            }
-        }
     }
 
 }
