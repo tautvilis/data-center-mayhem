@@ -30,8 +30,8 @@ public class Wiretask : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-
+    {   
+        CameraManager = GameObject.Find("CameraManager");
 
         _availableColors = new List<Color>(_wireColors);
         _available1WireIndex = new List<int>();
@@ -96,6 +96,7 @@ public class Wiretask : MonoBehaviour
                 _backgroundOk.SetActive(true);
                 yield return new WaitForSeconds(3f);
                 CameraManager.GetComponent<CameraManager>().ChangeCamera(1);
+                Destroy(GameObject.FindGameObjectWithTag("minigame"));
             }else{
                 Debug.Log("Puzzle incompleted");
             }

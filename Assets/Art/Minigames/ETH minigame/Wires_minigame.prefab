@@ -3613,6 +3613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d529df0d06834a82abde8ce7ab12aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraManager: {fileID: 0}
+  _backgroundError: {fileID: 2790322862212605558}
+  _backgroundOk: {fileID: 5515680609042442758}
   _wireColors:
   - {r: 0.9433962, g: 0, b: 0, a: 1}
   - {r: 0, g: 1, b: 0.05740881, a: 1}
@@ -3657,6 +3660,7 @@ MonoBehaviour:
   - {fileID: 1914820258310155381}
   CurrentDragWire: {fileID: 0}
   CurrentHoverWire: {fileID: 0}
+  IsTaskCompleted: 0
 --- !u!1 &3451186816663337798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5167,7 +5171,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 8584958185069866405}
   m_PlaneDistance: 300
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -5841,7 +5845,7 @@ GameObject:
   - component: {fileID: 1609660521814062019}
   m_Layer: 0
   m_Name: Wires_minigame
-  m_TagString: Untagged
+  m_TagString: minigame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5859,6 +5863,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6441095692247962898}
+  - {fileID: 7851073588759502480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6279,6 +6284,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsSuccess: 0
   customColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!1 &7184335791136360747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7851073588759502480}
+  - component: {fileID: 8584958185069866405}
+  - component: {fileID: 3529095118885803841}
+  - component: {fileID: 2882501019651363542}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7851073588759502480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184335791136360747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 408.29352, y: 262.43948, z: 198.92178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1609660521814062019}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &8584958185069866405
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184335791136360747}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 9.66
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &3529095118885803841
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184335791136360747}
+  m_Enabled: 1
+--- !u!114 &2882501019651363542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7184335791136360747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 100
 --- !u!1 &8339363453090902046
 GameObject:
   m_ObjectHideFlags: 0
