@@ -11,10 +11,10 @@ public class CameraManager : MonoBehaviour
     public void ChangeCamera(int camera) {
         if(camera == 1) {
             cam1.SetActive(true);
-            cam2.SetActive(false);
+            // cam2.SetActive(false);
         }else {
             cam1.SetActive(false);
-            cam2.SetActive(true);
+            // cam2.SetActive(true);
         }
     }
     void Start()

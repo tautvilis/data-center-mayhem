@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Server
   - ServerFixIcon
+  - minigame
   layers:
   - Default
   - TransparentFX

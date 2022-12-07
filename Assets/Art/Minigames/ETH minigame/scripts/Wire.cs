@@ -32,6 +32,7 @@ public class Wire : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHand
 
     public void EnablePort(bool enable) {
         gameObject.SetActive(enable);
+
     }
     // Start is called before the first frame update
     void Start()

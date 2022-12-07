@@ -13,7 +13,7 @@ public class MinigameManager : MonoBehaviour
     }
 
     public void Startminigame() {
-        currentGame = Instantiate(_minigames[Random.Range(0,_minigames.Count)]);
+        currentGame = Instantiate(_minigames[Random.Range(0,_minigames.Count)], new Vector3(-129.23f, -66.24f, -203f),Quaternion.identity);
     }
 
     public void DestroyCurrentMinigame() {
