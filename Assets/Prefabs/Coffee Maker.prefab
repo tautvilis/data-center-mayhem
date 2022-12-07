@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7526266899591461976
+--- !u!1 &1666483599223697001
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7526266899591461978}
-  - component: {fileID: 7526266899591461977}
+  - component: {fileID: 8603162944797126811}
+  - component: {fileID: 8542306727058209643}
   m_Layer: 0
-  m_Name: Fix
+  m_Name: Coffee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &7526266899591461978
+--- !u!4 &8603162944797126811
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7526266899591461976}
+  m_GameObject: {fileID: 1666483599223697001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2638178, y: 0.787057, z: 0.060333353}
-  m_LocalScale: {x: 0.7407408, y: 0.7407408, z: 0.7407408}
+  m_LocalPosition: {x: 0.03, y: 0.8, z: 0.0603}
+  m_LocalScale: {x: 0.07814815, y: 0.07814815, z: 0.07814815}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7526266901336751444}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7526266899591461977
+--- !u!212 &8542306727058209643
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7526266899591461976}
+  m_GameObject: {fileID: 1666483599223697001}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,12 +73,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2cc6ccaec5e32e64a9ffdfced0ff958b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75363072b457e418ab90131d3e36f571, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.5, y: 2.9}
+  m_Size: {x: 4.08, y: 6.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -115,7 +115,7 @@ Transform:
   m_LocalScale: {x: 1.35, y: 1.35, z: 1.35}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 7526266899591461978}
+  - {fileID: 8603162944797126811}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -209,5 +209,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 480f442000ee249ce9e5b2f375802faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrewIcon: {fileID: 7526266899591461976}
-  Player: {fileID: 0}
+  BrewIcon: {fileID: 1666483599223697001}
